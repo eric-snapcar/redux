@@ -1,10 +1,9 @@
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
-const filter = (todos, filter) => {
+const filter_ = (todos, filter) => {
   switch (filter) {
     case 'SHOW_ALL':
-      console.log('ALL');
       return todos
     case 'SHOW_COMPLETED':
       return todos.filter(t => t.completed)
@@ -16,7 +15,7 @@ const filter = (todos, filter) => {
 }
 const mapStateToProps = function(state){
   return {
-  todos: filter(state.todoss, state.selectedFilter)
+  todos: filter_(state.todoss, state.selectedFilter)
 };}
 const mapDispatchToProps = {
   onTodoClick: toggleTodo

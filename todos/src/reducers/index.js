@@ -2,9 +2,11 @@ import { combineReducers } from 'redux'
 import todos from './todos'
 import selectedFilter from './selectedFilter'
 
-const todoApp = combineReducers({
+const reducers =  {
   todoss : todos,
   selectedFilter : selectedFilter
-})
+}
 
-export default todoApp
+const combinedReducers = combineReducers(reducers)
+
+export {reducers,combinedReducers}
