@@ -12,11 +12,11 @@ class Link extends React.Component  {
         this.onClick = this.onClick.bind(this);
     }
     render(){
-        const { active, children, onClick } = this.props
+        const { active, title, onClick } = this.props
         if (active) {
-            return <span>{children}</span>
+            return <span>{title}</span>
         }
-        return (<a href="#" onClick={this.onClick}> {children}  </a>)
+        return (<a href="#" onClick={this.onClick}> {title}  </a>)
     }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
-class AddTodo extends React.Component  {
+class AddForm extends React.Component  {
     // MARK: private
     onSubmit_(e){
       e.preventDefault()
@@ -24,7 +24,7 @@ class AddTodo extends React.Component  {
               this.input = node
             }} />
             <button type="submit">
-              Add Todo
+              Add
             </button>
           </form>
         </div>
@@ -39,5 +39,5 @@ const mapDispatchToProps = function(dispatch, props) {
     onSubmit: onSubmit_
   }
 }
-AddTodo = connect(null,mapDispatchToProps)(AddTodo)
-export default AddTodo
+AddForm = connect(null,mapDispatchToProps)(AddForm)
+export default AddForm

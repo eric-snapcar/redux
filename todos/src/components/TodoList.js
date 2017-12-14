@@ -1,5 +1,5 @@
 import React from 'react'
-import Todo from './Todo'
+import TodoCell from './TodoCell'
 
 class TodoList extends React.Component  {
     // MARK : React.Component  override
@@ -7,7 +7,7 @@ class TodoList extends React.Component  {
       return (
         <ul>
           {this.props.todos.map(todo =>
-            <Todo
+            <TodoCell
               key={todo.id}
               {...todo}
               onClick={() => this.props.onTodoClick(todo.id)}
