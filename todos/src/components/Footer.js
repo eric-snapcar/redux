@@ -1,5 +1,5 @@
 import React from 'react'
-import Filter_Link from '../containers/Filter_Link'
+import Link_Filter from '../containers/Link_Filter'
 
 class Footer extends React.Component  {
   // MARK: React.Component override
@@ -8,9 +8,9 @@ class Footer extends React.Component  {
         <div>
           Show:
           {" "}
-          <Filter_Link filter="SHOW_ALL" title="All"/>
-          <Filter_Link filter="SHOW_ACTIVE" title="Active"/>
-          <Filter_Link filter="SHOW_COMPLETED" title="Completed"/>
+          <Link_Filter filter="SHOW_ALL" title="All"/>
+          <Link_Filter filter="SHOW_ACTIVE" title="Active"/>
+          <Link_Filter filter="SHOW_COMPLETED" title="Completed"/>
         </div>
       );
   }

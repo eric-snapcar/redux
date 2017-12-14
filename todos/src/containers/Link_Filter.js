@@ -19,9 +19,9 @@ const mapDispatchToProps = function(dispatch, props) {
     onClick: onClick_
   }
 }
-const Filter_Link = connect(
+const Link_Filter = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Link)
 
-export default Filter_Link
+export default Link_Filter
