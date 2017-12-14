@@ -1,16 +1,12 @@
 import { connect } from 'react-redux'
 import { setselectedFilter } from '../actions'
 import Link from '../components/Link'
-
-const isActive = function(state, props){
-  return props.filter === state.selectedFilter;
+const mapStateToProps = function(state, props){
+  const isActive = function(state, props){
+    return props.filter === state.selectedFilter;
+  }
+  return {active: isActive(state,props)};
 }
-const onClick = function(dispatch, props){
-    dispatch(setselectedFilter(props.filter));
-}
-const mapStateToProps = (state, props) => ({
-  active: isActive(state,props)
-})
 const mapDispatchToProps = function(dispatch, props) {
   const onClick_ = function(){
     dispatch(setselectedFilter(props.filter))
