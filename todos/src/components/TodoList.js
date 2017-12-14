@@ -6,7 +6,7 @@ class TodoList extends React.Component  {
     render(){
       return (
         <ul>
-          {this.props.todos.map(todo =>
+          {this.props.todos.map((todo, index) =>
             <TodoCell
               key={todo.id}
               {...todo}

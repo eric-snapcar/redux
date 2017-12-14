@@ -1,9 +1,18 @@
-let nextTodoId = 0
-export const addTodo = (text) => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
-})
+import LocaleStorageService from '../service/LocaleStorageService';
+
+let currentToDoId = LocaleStorageService.getCurrentToDoId();
+
+
+
+export const addTodo = function(text){
+  currentToDoId++
+  LocaleStorageService.setCurrentToDoId(currentToDoId)
+  return {
+    type: 'ADD_TODO',
+    id: currentToDoId,
+    text
+  }
+}
 
 export const setselectedFilter = (filter) => ({
   type: 'SET_VISIBILITY_FILTER',
